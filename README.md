@@ -27,7 +27,8 @@ Il s'inscrit dans le cadre de notre formation et vise à renforcer nos compéten
 ## 📜 Introduction
 
 L'automatisation des tâches est essentielle dans l'administration système moderne.  
-À travers ce projet, nous avons exploré les possibilités offertes par Bash et PowerShell pour répondre à divers besoins : gestion de fichiers, de permissions, création d'utilisateurs, surveillance système, etc. Nous sommes 3 pour faire ce projet, Eric, Bertrand et Alan.
+À travers ce projet, nous avons exploré les possibilités offertes par Bash et PowerShell pour répondre à divers besoins : gestion de fichiers, de permissions, création d'utilisateurs, surveillance système, etc.  
+Nous sommes 3 pour faire ce projet, Eric, Bertrand et Alan.  
 Nous avons été habitué à utiliser Virtual Box mais ce travail sera réaliser en terre inconnue : Proxmox !
 
 ---

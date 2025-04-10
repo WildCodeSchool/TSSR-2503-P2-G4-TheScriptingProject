@@ -35,6 +35,9 @@ do
         1)
 
             #On pose la question compte, groupe, Droits d'accés ou historique ou Quitter?
+            while true
+
+            do
 
             echo "Quel est votre choix entre:"
             echo "1 - Compte"
@@ -50,6 +53,9 @@ do
                 #lancement sous menu compte
 
                     #On pose la question Création de compte, Changement de mot de passe , Suppression de Compte , désactivation de compte ou quitter.
+                    while true
+                    do
+
                     echo "Quel est votre choix entre:"
                     echo "1 - Création de compte"
                     echo "2 - chagement de mot de passe"
@@ -82,7 +88,7 @@ do
 
                         # si Quitter
                         5)
-
+                        break
                         ;;
 
                         # Si erreur de Saisie
@@ -91,12 +97,15 @@ do
 
                         ;;
                         esac
+                    done
                 ;;
                 #Si Groupe
                 2)
                 
 
                     # On pose la question Ajout à un groupe d'adminstration ou ajout d'un groupe Local ou Sortie d'un groupe local ou Groupe d'appartance d'un utilisateur ou quitter
+                    while true
+                    do
                     echo "Quel est votre choix entre:"
                     echo "1 - Ajout à un groupe d'administration"
                     echo "2 - Ajout à un groupe local"
@@ -129,7 +138,7 @@ do
                         #Si Quitter
 
                         5)
-
+                        break
                         ;;
 
                         #Si erreur de Saisie
@@ -139,12 +148,14 @@ do
                         ;;
 
                         esac
-                        
+                    done
                 ;;
                 #Si Droits d'accés
                 3)
                 
                     # On pose la question Droits/permissions de l'utilisateur sur un dossier ou un fichier
+                    while true
+                    do
                     echo " Quel est votre choix entre:"
                     echo "1 - Droit/permissions sur un dossier"
                     echo "2 - Droit/permissions sur un fichier"
@@ -164,7 +175,7 @@ do
                         
                         # si quitter
                         3)
-
+                        break
                         ;;
 
                         # si erreur de saisie
@@ -174,11 +185,14 @@ do
                         ;;
 
                         esac
+                    done
                 ;;
                 #si Historique
                 4)
                 
                     # On demande si l'utilisateur veut lire la date de dernière connexion d'un user, modif de mdp, consulter la liste des sessions ouverte et l'historique des commandes
+                    while true
+                    do
                     echo "Quel est votre choix entre:"
                     echo "1 - Afficher la dernière connexion d'un utilisateur"
                     echo "2 - Afficher la derniière modification du mot de passe"
@@ -211,7 +225,7 @@ do
 
                         # si quitter
                         5)
-
+                        break
                         ;;
 
                         # si erreur de saisie
@@ -221,11 +235,13 @@ do
                         ;;
 
                         esac
+                    done
                 
                 ;;
 
                 #Si quitter
                 5)
+                break
                 ;;
 
                 #si erreur de saisies
@@ -235,12 +251,15 @@ do
                 ;;
 
                 esac
+                done
         ;;
         
         2)
         #Si Disque et Repertoire
 
             #On pose la question Disque ou Repertoire ou  Quitter?
+            while true
+            do
             echo "Quel est votre choix entre:"
             echo "1 - Disque"
             echo "2 - Repertoire"
@@ -252,20 +271,56 @@ do
                 #Si Disque
                 1)
                     #On pose la question Nb de disque ou Partition ou Espace disque restant par Partition ou Nom et espace disque d'un dossier ou Liste des lecteurs monté ou quitter
+                    while true
+                    do
+                    echo "Quel est votre choix entre:"
+                    echo "1 - Nombre de disque"
+                    echo "2 - Partition"
+                    echo "3 - Espace disque restant par partition/volume"
+                    echo "4 - Nom et espace disque d'un dossier (nom de dossier demandé)"
+                    echo "5 - Liste des lecteurs monté (disques, cd, etc...)"
+                    echo "6 - Quitter"
+                    read -p "Quel est votre réponse en chiffre: " menu_disque
+                    case $menu_disque in
                 
                         #  Si Nb de Disque
+                        1)
+
+                        ;;
 
                         # Si Partition
+                        2)
+
+                        ;;
 
                         # Si Espace disque restant par partition
+                        3)
 
-                        # Si Nom et espace disque d'un dossier 
+                        ;;
+
+                        # Si Nom et espace disque d'un dossier
+                        4)
+
+                        ;; 
 
                         # Si liste des lecteurs monté
+                        5)
+
+                        ;;
 
                         # Si Quitter
+                        6)
+                        break
+                        ;;
 
                         # Else erreur
+                        *)
+                        echo "erreur de saisie"
+
+                        ;;
+
+                        esac
+                    done
 
                 ;;
 
@@ -273,32 +328,67 @@ do
                 2)
 
                     # on pose la question Création de repertoire ou modification répertoire ou suppression de repertoire ou quitter
+                    while True
+                    do
+                    echo "1 - Création de répertoire"
+                    echo "2 - Modification de répertoire"
+                    echo "3 - Suppression de répertoire"
+                    echo "4 - Quitter"
+                    read -p "Quel est votre réponse en chiffre:" menu_repertoire
+
+                    case $menu_repertoire in
 
                         #si Création de de repertoire
+                        1)
+
+                        ;;
 
                         #si modification répertoire
+                        2)
+
+                        ;;
 
                         #suppression de repertoire 
+                        3)
+
+                        ;;
+
+                        #si quitter
+                        4)
+                        break
+                        ;;
+
+                        #si erreur de saisie
+                        *)
+                        echo "Erreur de saisie"
+                        ;;
+
+                        esac
+
+                    done
 
                 ;;
 
                 #si quitter
                 3)
-
+                break
                 ;;
 
                 #else erreur de saisie
                 *)
-
+                echo "Erreur de saisie"
                 ;;
 
                 esac
+            done
         ;;
 
         3)
         # Si Sécurité et réseaux
 
             #On pose le question Réseau ou Pare-Feu ou Gestion à distance ou quitter
+            while true
+            do
             echo "quel est votre choix?"
             echo "1 - Réseau"
             echo "2 - Pare-feu"
@@ -358,14 +448,16 @@ do
 
                 #si quitter
                 4)
-
+                break
                 ;;
+
                 #si erreur de saisie
                 *)
-
+                echo "Errreur de saisie"
                 ;;
 
                 esac
+            done
 
         ;;
 
@@ -373,6 +465,8 @@ do
         #Si Gestion syteme
 
             #on pose la question Logiciel ou système ou Journaux d'evenements ou quitter
+            while true
+            do
             echo "Quel est votre choix entre:"
             echo "1 - Logiciel"
             echo "2 - Sytème"
@@ -434,32 +528,31 @@ do
 
                 #Si Quitter
                 4)
-
+                break
                 ;;
                 
                 #Si erreur ou des cas précedent.
                 *)
-
+                echo "Erreur de saisie"
                 ;;
 
                 esac
+            done
+        
 
         ;;
         
         #Si quitter
         5)
-
-
+        break
         ;;
         #Si erreur ou autre choix.
         *)
-
+        echo "Erreur de saisie"
         ;;
-
         esac
     
     
-
     #Quitter boucle fonction
     done
 

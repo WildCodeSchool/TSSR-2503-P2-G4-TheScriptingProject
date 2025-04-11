@@ -39,9 +39,8 @@ read -p "Merci d'indique le compte pour lequel vous souhaitez changer le mot de 
       echo "Vous avez choisi le compte $1" && passwd $user
     fi
 
-
+#SUPPRESSION DE COMPTE
 #!/bin/bash
-
 # Demande d'insertion/vérification du compte à supprimer
 read -p "Merci d'indiquer le nom d'utilisateur : " user
 
@@ -352,4 +351,46 @@ chage -l $user
 
 read -p "Merci d'entrer le nom d'un utilisateur :" user
 
+##On vérifie si l'utilisateur existe bien
+if [ -z "$user"]; then
+    echo L'utilisateur n'exite pas
+    exit 1
+fi
+
+echo "Sessions ouvertes par l'utilisateur $user :"
+who | grep "^$user"
+
+
+#!/bin/bash
+
+#Lecture du fichier history
+
+cat ~/.bash_history
+
+
+#!bin/bash/
+
+# --- Initialisation des fichiers de journalisation et logs ---
+journal_file="/var/log/mon_script_journal.log"
+log_file="/var/log/mon_script_actions.log"
+
+# Rediriger toutes les erreurs (stderr) vers le fichier de logs technique
+exec 2>> "$log_file"
+
+# Fonction pour écrire proprement dans le journal humain
+journaliser() {
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> "$journal_file"
+}
+
+# --- Démarrer la journalisation ---
+journaliser "=== Démarrage du script ==="
 #
+
+#!/bin/bash
+
+log_file="/var/log/mon_script.log"
+
+# Fonction de log
+journaliser() {
+  echo "$(date '+%Y-%m-%d %H:%M:%S') - $*" >> "$log_file"
+}

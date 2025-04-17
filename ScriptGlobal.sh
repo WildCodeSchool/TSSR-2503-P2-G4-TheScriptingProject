@@ -19,7 +19,7 @@
 
 ### MISE EN PLACE DE LA JOURNALISATION
 
-log_file="/tmp/var/log_evt.log"
+log_file="/var/log/log_evt.log"
 
 #Script de journalisation pour les actions
 #Cette fonction assurera que les différents éléments factuels soient enregistrés
@@ -29,7 +29,7 @@ local date=$(date +%Y%m%d)
 local time=$(date +%H%M%S)
 local user=$(whoami)
 local event="$*"
-echo "$date-$time-$user-$event" >> "$log_file"
+echo "$date-$time-$user-$event" | sudo tee -a "$log_file" > /dev/null
 
 }
 
@@ -1612,7 +1612,6 @@ log_evt "Début de la navigation dans le menu"
             echo "1 - Réseau"
             echo "2 - Pare-feu"
             echo "3 - Gestion à distance"
-            echo "4 - Quitter"
             read -p "votre reponse en chiffre:" menu_securite_reseaux
 
             case $menu_securite_reseaux in
@@ -1926,42 +1925,29 @@ do
 
 
 
-
-#envoi d'admin menu dans la commande 
+# Envoi de admin_menu dans la commande
 commande="$(printf '%q' "$(declare -f); admin_menu")"
 
-#lancement connexion ssh
+# Connexion SSH au serveur
 ssh -t "$user@$ip" "sudo bash -c $commande"
+ssh_status=$?
 
-# 3. Récupérer le fichier log
-scp "$user@$ip:/tmp/log_evt.log" "/var/log/log_evt_${ip}_$(date +%Y%m%d_%H%M%S).log"
+if [ $ssh_status -eq 0 ]; then
+    echo "Connexion SSH réussie. Récupération des logs..."
 
-# 4. Supprimer le fichier log distant
-ssh "$user@$ip" "sudo rm -f /tmp/log_evt.log"
+    # Récupérer le fichier log depuis /var/log/ du serveur vers le client
+    scp "$user@$ip:/var/log/log_evt.log" "log_evt_${ip}_$(date +%Y%m%d_%H%M%S).log"
 
-echo "Connection SSH terminée A bientôt!"   #  affiché quand on quitte le menu ce qui coupe la connexion ssh 
+    # Supprimer le fichier log sur le serveur
+    ssh "$user@$ip" "sudo rm -f /var/log/log_evt.log"
 
-    #commande ssh qui permet de se connecter et d'éxécuter le script à distance
-    #ssh -t permet d'éxécuter sur le client à distance et d'afficher les menus du admin_menu
-    #mais tout doit être dans une fonction
-    #$(declare -f admin_menu) initialise la fonction sur le client via la commande ssh
-    #printf '%q' regle le probleme des caractères spéciaux et évite d'arreter le script
-    #et ensuite le client peut donc éxécuter la fonction admin menu qui gère le script admin_menu
-
-
-     # Vérifie le code de retour de la commande précédente
-    if [ $? -eq 0 ]; then
-        
-
-        break  # Sort de la boucle while
-        echo "Connection terminée"
-    else
-        echo "Échec connexion"
-        echo "Retour au menu..."
-        
-        continue
-    fi
-
+    echo "Connection SSH terminée. À bientôt!"
+    break
+else
+    echo "Échec de la connexion SSH."
+    echo "Retour au menu..."
+    continue
+fi
 
     
    

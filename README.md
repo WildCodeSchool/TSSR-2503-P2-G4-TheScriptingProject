@@ -49,9 +49,11 @@ Nous avons été habitué à utiliser Virtual Box mais ce travail sera réaliser
 
 | Team | Rôles | Missions |
 |:---------:|:---------:|:---------:|
-|     Eric MARTIENNE      |      Scrum Master     |     |
-|      Bertrand GIRARDET     |  Product Owner         |           |
-|      Alan COEURJOLY     |      Technicien     |           |
+|     Eric MARTIENNE      |      Scrum Master     |   Script squelette. Scripts fonctions disque et répertoire. Vérifier les
+moyens matériels.  |
+|      Bertrand GIRARDET     |  Product Owner         |    Scripts fonctions sécurité et réseaux, système et test scripts. Faire le
+lien avec le client et vérifier la conformité du projet.       |
+|      Alan COEURJOLY     |      Technicien     |    Scripts fonctions utilisateurs et test script, création du trello, readme       |
 
 
 ---
@@ -60,9 +62,13 @@ Nous avons été habitué à utiliser Virtual Box mais ce travail sera réaliser
 
 | Team | Rôles | Missions |
 |:---------:|:---------:|:---------:|
-|     Eric MARTIENNE      |           |           |
-|      Bertrand GIRARDET     |           |           |
-|     Alan COEURJOLY      |           |           |
+|     Eric MARTIENNE      |     Technicien      |           |
+|      Bertrand GIRARDET     |    Scrum Master     |      Coordination, protocole SSH, améliorations du script
+principal, démarage des fonctions réseaux et disques sur
+Powershell     |
+|     Alan COEURJOLY      |    Product Owner    |      Liaisons avec le client, test réel proxmox, journalisation,
+améliorations du script principal, démarrage des
+fonctions utilisateurs sur Powershell     |
 
 
 ---
@@ -71,9 +77,9 @@ Nous avons été habitué à utiliser Virtual Box mais ce travail sera réaliser
 
 | Team | Rôles | Missions |
 |:---------:|:---------:|:---------:|
-|      Eric MARTIENNE     |           |           |
+|      Eric MARTIENNE     |     Product Owner     |    Liaisons avec le client, squelette powershell      |
 |      Bertrand GIRARDET     |           |           |
-|      Alan COEURJOLY     |           |           |
+|      Alan COEURJOLY     |   Scrum Master     |       Coordination     |
 
 
 ---
@@ -100,6 +106,7 @@ Nous avons été habitué à utiliser Virtual Box mais ce travail sera réaliser
 - Elaboration d'un pseudo-code aussi important.
 - Créer une arborescence fonctionnelle.
 - Créer de multiples fonctions.
+- temps pour le debogage
 
 ---
 
@@ -112,6 +119,9 @@ Nous avons été habitué à utiliser Virtual Box mais ce travail sera réaliser
 ---
 
 ## 📈 Améliorations possibles
+
+- Ajouter des fonctions au script PowerShell
+- Ajouter des fonctions au script Bash
 
 
 

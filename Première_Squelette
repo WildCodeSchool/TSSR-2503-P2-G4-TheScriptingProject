@@ -1,0 +1,130 @@
+#menu principal
+#boucle While
+do {
+    Clear-Host
+    Write-Host "Menu principal :"
+    Write-Host "1 - Groupe"
+    Write-Host "2 - Disque et Répertoire"
+    Write-Host "3 - Droits d'accès"
+    Write-Host "4 - Gestion système"
+    Write-Host "5 - Quitter"
+
+    $mainChoice = Read-Host "Votre réponse en chiffre"
+
+    #switch du menu
+    switch ($mainChoice) {
+    
+        1 {
+            do {
+                Write-Host "1 - Ajouter à un groupe d'administration"
+                Write-Host "2 - Ajouter à un groupe local"
+                Write-Host "3 - Sortir d'un groupe local"
+                Write-Host "4 - Voir groupe d'appartenance"
+                Write-Host "5 - Quitter"
+                $menuGroupe = Read-Host "Votre réponse en chiffre"
+               
+                #switch sous-menu groupe d'administration
+                switch ($menuGroupe) {
+                    1 { # Ajouter à un groupe d'admin }
+                    2 { # Ajouter à un groupe local }
+                    3 { # Sortir d'un groupe local }
+                    4 { # Voir groupes d'appartenance }
+                    5 { break }
+                    default { Write-Host "Erreur de saisie" }
+                }
+            } while ($true)
+        }
+
+        2 {
+            do {
+                Write-Host "1 - Disque"
+                Write-Host "2 - Répertoire"
+                Write-Host "3 - Quitter"
+                $menuDiskDir = Read-Host "Votre réponse en chiffre"
+
+                switch ($menuDiskDir) {
+                    1 {
+                        do {
+                            Write-Host "1 - Nombre de disques"
+                            Write-Host "2 - Partition"
+                            Write-Host "3 - Espace disque restant"
+                            Write-Host "4 - Nom et espace disque d'un dossier"
+                            Write-Host "5 - Liste des lecteurs montés"
+                            Write-Host "6 - Quitter"
+                            $menuDisque = Read-Host "Votre réponse en chiffre"
+
+                            switch ($menuDisque) {
+                                1 { }
+                                2 { }
+                                3 { }
+                                4 { }
+                                5 { }
+                                6 { break }
+                                default { Write-Host "Erreur de saisie" }
+                            }
+                        } while ($true)
+                    }
+
+                    2 {
+                        do {
+                            Write-Host "1 - Création de répertoire"
+                            Write-Host "2 - Modification de répertoire"
+                            Write-Host "3 - Suppression de répertoire"
+                            Write-Host "4 - Quitter"
+                            $menuRepertoire = Read-Host "Votre réponse en chiffre"
+
+                            switch ($menuRepertoire) {
+                                1 { }
+                                2 { }
+                                3 { }
+                                4 { break }
+                                default { Write-Host "Erreur de saisie" }
+                            }
+                        } while ($true)
+                    }
+
+                    3 { break }
+                    default { Write-Host "Erreur de saisie" }
+                }
+            } while ($true)
+        }
+
+        3 {
+            do {
+                Write-Host "1 - Droit/permissions sur un dossier"
+                Write-Host "2 - Droit/permissions sur un fichier"
+                Write-Host "3 - Quitter"
+                $menuDroitAcces = Read-Host "Votre réponse en chiffre"
+
+                switch ($menuDroitAcces) {
+                    1 { }
+                    2 { }
+                    3 { break }
+                    default { Write-Host "Erreur de saisie" }
+                }
+            } while ($true)
+        }
+
+        4 {
+            do {
+                Write-Host "1 - Logiciel"
+                Write-Host "2 - Système"
+                Write-Host "3 - Journaux d'événements"
+                Write-Host "4 - Quitter"
+                $menuSystem = Read-Host "Votre réponse en chiffre"
+
+                switch ($menuSystem) {
+                    1 { }
+                    2 { }
+                    3 { }
+                    4 { break }
+                    default { Write-Host "Erreur de saisie" }
+                }
+            } while ($true)
+        }
+
+        5 { break }
+        default { Write-Host "Erreur de saisie" }
+    }
+
+} while ($true)

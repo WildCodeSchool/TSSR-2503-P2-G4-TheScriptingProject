@@ -1,5 +1,58 @@
+#Fonctions
+Fonction groupeadmin { 
+
+}
+Fonction ajoutgroupelocal {
+    
+}
+Fonction sortirgroupelocal {
+
+}
+Fonction groupeappartenance {
+
+}
+Fonction nombredisques {
+
+}
+Fonction partition {
+
+}
+Fonction espacedisquerestant {
+
+}
+Fonction nometespacedisquedundossier {
+
+}
+Fonction listedeslecteursmontés {
+
+}
+Fonction creationderepertoire {
+
+}
+Fonction modificationderepertoire {
+
+}
+Fonction suppressionderepertoire {
+
+}
+Fonction droitpermissiondossier {
+
+}
+Fonction droitpermissionfichier {
+
+}
+Fonction logiciel  {
+
+}
+Fonction systeme {
+
+}
+Fonction Journauxdevenements {
+
+}
+
 #menu principal
-#boucle While
+#boucle While pour toujours revenir par defaut au debut aprés une utilisation
 do {
     Clear-Host
     Write-Host "Menu principal :"
@@ -11,11 +64,12 @@ do {
 
     $mainChoice = Read-Host "Votre réponse en chiffre"
 
-    #switch du menu
+    #switch du menu groupe
     switch ($mainChoice) {
     
         1 {
             do {
+                #switch sous-menu groupe d'administration
                 Write-Host "1 - Ajouter à un groupe d'administration"
                 Write-Host "2 - Ajouter à un groupe local"
                 Write-Host "3 - Sortir d'un groupe local"
@@ -23,12 +77,12 @@ do {
                 Write-Host "5 - Quitter"
                 $menuGroupe = Read-Host "Votre réponse en chiffre"
                
-                #switch sous-menu groupe d'administration
+               
                 switch ($menuGroupe) {
-                    1 { # Ajouter à un groupe d'admin }
-                    2 { # Ajouter à un groupe local }
-                    3 { # Sortir d'un groupe local }
-                    4 { # Voir groupes d'appartenance }
+                    1 { Fonction groupeadmin }
+                    2 { Fonction ajoutgroupelocal }
+                    3 { Fonction sortirgroupelocal }
+                    4 { Fonction groupeappartenance }
                     5 { break }
                     default { Write-Host "Erreur de saisie" }
                 }
@@ -37,14 +91,16 @@ do {
 
         2 {
             do {
+                #sous menu du groupe disque et repertoire
                 Write-Host "1 - Disque"
                 Write-Host "2 - Répertoire"
                 Write-Host "3 - Quitter"
                 $menuDiskDir = Read-Host "Votre réponse en chiffre"
-
+                
                 switch ($menuDiskDir) {
                     1 {
                         do {
+                            #sous sous menu de disque
                             Write-Host "1 - Nombre de disques"
                             Write-Host "2 - Partition"
                             Write-Host "3 - Espace disque restant"
@@ -54,11 +110,11 @@ do {
                             $menuDisque = Read-Host "Votre réponse en chiffre"
 
                             switch ($menuDisque) {
-                                1 { }
-                                2 { }
-                                3 { }
-                                4 { }
-                                5 { }
+                                1 { Fonction nombredisques}
+                                2 { Fonction partition}
+                                3 { Fonction espacedisquerestant}
+                                4 { Fonction nometespacedisquedundossier}
+                                5 { fonction listedeslecteursmontés}
                                 6 { break }
                                 default { Write-Host "Erreur de saisie" }
                             }
@@ -67,6 +123,7 @@ do {
 
                     2 {
                         do {
+                            #sous sous menu de repertoire
                             Write-Host "1 - Création de répertoire"
                             Write-Host "2 - Modification de répertoire"
                             Write-Host "3 - Suppression de répertoire"
@@ -74,9 +131,9 @@ do {
                             $menuRepertoire = Read-Host "Votre réponse en chiffre"
 
                             switch ($menuRepertoire) {
-                                1 { }
-                                2 { }
-                                3 { }
+                                1 { Fonction creationderepertoire }
+                                2 { Fonction modificationderepertoire}
+                                3 { Fonction suppressionderepertoire }
                                 4 { break }
                                 default { Write-Host "Erreur de saisie" }
                             }
@@ -90,6 +147,7 @@ do {
         }
 
         3 {
+            #switch du menu droit d'accès
             do {
                 Write-Host "1 - Droit/permissions sur un dossier"
                 Write-Host "2 - Droit/permissions sur un fichier"
@@ -97,8 +155,8 @@ do {
                 $menuDroitAcces = Read-Host "Votre réponse en chiffre"
 
                 switch ($menuDroitAcces) {
-                    1 { }
-                    2 { }
+                    1 { Fonction droitpermissiondossier}
+                    2 { Fonction droitpermissionfichier}
                     3 { break }
                     default { Write-Host "Erreur de saisie" }
                 }
@@ -106,6 +164,7 @@ do {
         }
 
         4 {
+            #Sous menu de Gestion systéme
             do {
                 Write-Host "1 - Logiciel"
                 Write-Host "2 - Système"
@@ -114,9 +173,9 @@ do {
                 $menuSystem = Read-Host "Votre réponse en chiffre"
 
                 switch ($menuSystem) {
-                    1 { }
-                    2 { }
-                    3 { }
+                    1 { Fonction logiciel }
+                    2 { Fonction systeme }
+                    3 { Fonction Journauxdevenements}
                     4 { break }
                     default { Write-Host "Erreur de saisie" }
                 }

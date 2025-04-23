@@ -8,7 +8,8 @@ Bienvenue sur notre dépôt GitHub dédié à notre projet de scripting en Bash 
 ## 📢 Présentation du projet
 
 Ce projet a pour objectif de développer et d'automatiser différentes tâches système à l'aide de scripts Bash et PowerShell.  
-Il s'inscrit dans le cadre de notre formation et vise à renforcer nos compétences en scripting, gestion système et automatisation.
+Il s'inscrit dans le cadre de notre formation et vise à renforcer nos compétences en scripting, gestion système et automatisation.   
+Il est découpé en 4 sprints sur environ 4 semaines.
 
 ---
 
@@ -63,12 +64,8 @@ lien avec le client et vérifier la conformité du projet.       |
 | Team | Rôles | Missions |
 |:---------:|:---------:|:---------:|
 |     Eric MARTIENNE      |     Technicien      |           |
-|      Bertrand GIRARDET     |    Scrum Master     |      Coordination, protocole SSH, améliorations du script
-principal, démarage des fonctions réseaux et disques sur
-Powershell     |
-|     Alan COEURJOLY      |    Product Owner    |      Liaisons avec le client, test réel proxmox, journalisation,
-améliorations du script principal, démarrage des
-fonctions utilisateurs sur Powershell     |
+|      Bertrand GIRARDET     |    Scrum Master     |      Coordination, protocole SSH, améliorations du script principal, démarage des fonctions réseaux et disques sur Powershell     |
+|     Alan COEURJOLY      |    Product Owner    |      Liaisons avec le client, test réel proxmox, journalisation, améliorations du script principal, démarrage des fonctions utilisateurs sur Powershell     |
 
 
 ---
@@ -100,21 +97,49 @@ fonctions utilisateurs sur Powershell     |
 
 ## 🧗 Difficultés rencontrées
 
-- Gestion des erreurs dans les scripts complexes.
-- Découverte du logiciel Proxmox.
+### Sprint 1
 - Organisation du travail.
 - Elaboration d'un pseudo-code aussi important.
 - Créer une arborescence fonctionnelle.
-- Créer de multiples fonctions.
-- temps pour le debogage
+
+- 
+### Sprint 2
+- Gestion des erreurs dans les scripts complexes.
+- Découverte du logiciel Proxmox.
+- Création de multiples fonctions.
+- Difficultés à appeler les fonctions qui étaient dans d'autres fichiers
+
+### Sprint 3
+- Passer du Bash au Powershell
+- Journalisation entre le serveur et le client (autorisation de suppression du fichier log à distance après un scp)
+- Débogage chronophage
+- Mise en place du SSH
+
+### Sprint 4
+- Traduction du script bash en Powershell
+- Mise en place du invoke-command
+- Journalisation entre le serveur et le client
+- Charge de travail restant en dernière minute (débogage, journalisation, livrable et présentation)
 
 ---
 
 ## 💡 Solutions trouvées
 
+### Sprint 1
 - Utilisation des nombreuses ressources à notre disposition, cours, videos, client (très calé sur le sujet...)
 - Organisation régulière de points d'équipe pour la synchronisation des tâches.
+  
+### Sprint 2
 - Création d'un Trello pour avoir une vision sur l'ensemble du projet/script 1,2,3,4 ainsi que le suivi des réalisations de chaucun.
+- Entraide avec d'autres groupes, choix de faire un gros script et non plusieurs fonctions appelées.
+
+### Sprint 3
+- Ressources web, cours, vidéos et IA pour la compréhension de PowerShell
+- Concertation pour résoudre les problèmes, points réguliers
+- Beaucoup d'essai/crash test sur proxmox pour le SSH et journalisation pour se rapprocher de la solution
+
+### Sprint 4
+- Réassort d'huilde de coude à Métro
 
 ---
 
@@ -122,9 +147,11 @@ fonctions utilisateurs sur Powershell     |
 
 - Ajouter des fonctions au script PowerShell
 - Ajouter des fonctions au script Bash
-
-
+- Plus de code couleur
+- Journalisation mieux détaillée
 
 ---
+
+Le mot de l'équipe 4 : Un script d’une telle ampleur, c'était une grande première pour nous ! Malgré les difficultés individuelles et collectives, nous avons su faire preuve de solidarité et de résilience pour mener ce projet à terme. Certes, il manque encore quelques fonctions, le script pourrait être plus élégant, et nous avons beaucoup compté les uns sur les autres dans la dernière ligne droite... Mais au-delà des imperfections, ces +3000 lignes de code représentent avant tout un immense chemin parcouru, des leçons précieuses tirées, des compétences renforcées et une bien meilleure maîtrise du langage script. C’est notre plus belle victoire ! 
 
 > Merci de votre visite sur notre projet ! 🚀

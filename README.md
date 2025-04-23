@@ -50,10 +50,8 @@ Nous avons été habitué à utiliser Virtual Box mais ce travail sera réaliser
 
 | Team | Rôles | Missions |
 |:---------:|:---------:|:---------:|
-|     Eric MARTIENNE      |      Scrum Master     |   Script squelette. Scripts fonctions disque et répertoire. Vérifier les
-moyens matériels.  |
-|      Bertrand GIRARDET     |  Product Owner         |    Scripts fonctions sécurité et réseaux, système et test scripts. Faire le
-lien avec le client et vérifier la conformité du projet.       |
+|     Eric MARTIENNE      |      Scrum Master     |   Script squelette. Scripts fonctions disque et répertoire. Vérifier les moyens matériels.  |
+|      Bertrand GIRARDET     |  Product Owner         |    Scripts fonctions sécurité et réseaux, système et test scripts. Faire le lien avec le client et vérifier la conformité du projet.       |
 |      Alan COEURJOLY     |      Technicien     |    Scripts fonctions utilisateurs et test script, création du trello, readme       |
 
 
@@ -74,9 +72,9 @@ lien avec le client et vérifier la conformité du projet.       |
 
 | Team | Rôles | Missions |
 |:---------:|:---------:|:---------:|
-|      Eric MARTIENNE     |     Product Owner     |    Liaisons avec le client, squelette powershell      |
-|      Bertrand GIRARDET     |           |           |
-|      Alan COEURJOLY     |   Scrum Master     |       Coordination     |
+|      Eric MARTIENNE     |     Product Owner     |    Liaisons avec le client, squelette powershell , fonctions diverses     |
+|      Bertrand GIRARDET     |           | fonctions Powershell réseaux, sécurité, systeme, mise en place du remote entre les VM Proxmox       |
+|      Alan COEURJOLY     |   Scrum Master     |       Journalisation Powershell, fonctions gestion d'utilisateur, assemblage squelette fonction, test Proxmox     |
 
 
 ---

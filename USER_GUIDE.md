@@ -58,25 +58,37 @@ Voilà, avez ces informations vous avez les outils pour naviguer sur notre scrip
 
 * Ouvrir un terminal.
 
-* Aller dans le dossier contenant le script.
+* Aller dans le dossier contenant le script. cd /root/
 
-* Lancer avec ./script.sh.
+* Lancer avec ./ScriptGlobal.sh
 
 **Fonctionnalités principales :**
 
-Gestion des utilisateurs (ajouter, supprimer, modifier)
+Ce script est conçu pour une utilisation à distance via SSH.
 
-Gestion des répertoire et disques
+Avant toute interaction, il est nécessaire de fournir une de ces trois informations essentielles : l’adresse IP, le nom d’hôte de la machine cible, ou encore le nom de l’utilisateur distant (voir exemples ci-dessous).
 
-Gestion de la sécurité et des réseaux
+![Capture_SSH](https://github.com/WildCodeSchool/TSSR-2503-P2-G4-TheScriptingProject/blob/main/Ressources/Images_Linux/Linux%20-%201Capture%20d'ecran%20SSH.png)
 
-Gestion du système
+
+Une fois l’utilisateur identifié et le mot de passe saisi, vous accéderez à l’interface de navigation du script d’administration.
+
+Le script Linux Bash fonctionne lui aussi en arborescence de fonction.
+On accède d'abord à un menu principal, dont chaque option mène à un sous-menu, lui-même menant à des fonctions permettant d'effectuer des actions ou d'afficher des informations.
+
+Les 4 branches principales du scripts sont celles indiqués sur la photo ci-dessous.
+
+[Menu_Principal](https://github.com/WildCodeSchool/TSSR-2503-P2-G4-TheScriptingProject/blob/main/Ressources/Images_Linux/Linux%20-%202Menu_Principal.png)
 
 **Exemples d’utilisation rapide :**
 
-Ajouter un utilisateur et l'ajouter dans sudo
+Le fonctionnement étant le même que sur Windows, nous allons vous montrer un exemple en image. Dans celui-ci, nous avons besoin de récupérer les informations réseaux de notre cible Ubuntu.
 
-Supprimer un utilisateur d'un groupe
+A partir du menu principal, il faudra indiquer :
+Sécurité et Réseaux=3 ==> Réseaux=1 ==> La fonction s'exécute et donne les informations réseaux de la cible.
+(Voir ci dessous)
+
+[Demo_fonctionRéseau](https://github.com/WildCodeSchool/TSSR-2503-P2-G4-TheScriptingProject/blob/main/Ressources/Images_Linux/Linux%20-%203Fonction_Reseaux.png)
 
 ### 4) F.A.Q
 
@@ -85,5 +97,5 @@ Supprimer un utilisateur d'un groupe
 Q : Comment voir les logs d'utilisation ?
 
 A : 
-Sous Windows : C:\Windows\system32\logfiles\logfiles_$date.txt\ / 
-Sous Linux : /tmp/log_evt.log
+Sous Windows : C:/Windows/system32/logfiles/**fichier_log**
+Sous Linux : /var/log/script/**fichier_log**

@@ -40,7 +40,7 @@ Dans notre exemple, ce sera Alban.
 
 ![Ajout_Alban](https://github.com/WildCodeSchool/TSSR-2503-P2-G4-TheScriptingProject/blob/main/Ressources/Images_Windows/Windows%20-%203Capture%20d'%C3%A9cran%20Ajout_utilisateur.png)
 
-"Bienvenue dans l'équipe Alban ! Hein ? Tu ne viens plus ? Pas de soucis on va réctifier ca.
+"Bienvenue dans l'équipe Alban ! Hein ? Tu ne viens plus ? Pas de soucis on va réctifier ca."
 
 Si vous voulez supprimer un compte, il suffit de reprendre la meme arborescence :1,1,3 puis choisir l'utilisateur à supprimer et enfin suivre les indications de la fonction.
 
@@ -49,6 +49,8 @@ Illusatrations ci dessous.
 ![Arborescence_Suppression](https://github.com/WildCodeSchool/TSSR-2503-P2-G4-TheScriptingProject/blob/main/Ressources/Images_Windows/Windows%20-%204Capture%20d'%C3%A9cran%20Navigation_Suppression_Compte.png)
 
 ![Action_SuppressionAlban](https://github.com/WildCodeSchool/TSSR-2503-P2-G4-TheScriptingProject/blob/main/Ressources/Images_Windows/Windows%20-%205Capture%20d'%C3%A9cran%20Action_Suppression_Compte_Alban.png)
+
+Voilà, avez ces informations vous avez les outils pour naviguer sur notre script d'administration windows !
 
 ### 3) Partie Linux
 

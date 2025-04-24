@@ -3,7 +3,7 @@
 
 # Projet Scripting Bash / PowerShell
 
-Bienvenue sur notre dépôt GitHub dédié à notre projet de scripting en Bash et PowerShell sur une VM Proxmox.
+Bienvenue sur notre dépôt GitHub dédié à notre projet de scripting en Bash et PowerShell sur des VM Proxmox.
 
 ## 📢 Présentation du projet
 
@@ -100,7 +100,6 @@ Nous avons été habitué à utiliser Virtual Box mais ce travail sera réaliser
 - Elaboration d'un pseudo-code aussi important.
 - Créer une arborescence fonctionnelle.
 
-- 
 ### Sprint 2
 - Gestion des erreurs dans les scripts complexes.
 - Découverte du logiciel Proxmox.
@@ -137,7 +136,8 @@ Nous avons été habitué à utiliser Virtual Box mais ce travail sera réaliser
 - Beaucoup d'essai/crash test sur proxmox pour le SSH et journalisation pour se rapprocher de la solution
 
 ### Sprint 4
-- Réassort d'huilde de coude à Métro
+- Concertation pour résoudre les problèmes, points réguliers
+- Beaucoup d'essai/crash
 
 ---
 

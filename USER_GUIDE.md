@@ -78,7 +78,7 @@ On accède d'abord à un menu principal, dont chaque option mène à un sous-men
 
 Les 4 branches principales du scripts sont celles indiqués sur la photo ci-dessous.
 
-[Menu_Principal](https://github.com/WildCodeSchool/TSSR-2503-P2-G4-TheScriptingProject/blob/main/Ressources/Images_Linux/Linux%20-%202Menu_Principal.png)
+![Menu_Principal](https://github.com/WildCodeSchool/TSSR-2503-P2-G4-TheScriptingProject/blob/main/Ressources/Images_Linux/Linux%20-%202Menu_Principal.png)
 
 **Exemples d’utilisation rapide :**
 
@@ -88,7 +88,7 @@ A partir du menu principal, il faudra indiquer :
 Sécurité et Réseaux=3 ==> Réseaux=1 ==> La fonction s'exécute et donne les informations réseaux de la cible.
 (Voir ci dessous)
 
-[Demo_fonctionRéseau](https://github.com/WildCodeSchool/TSSR-2503-P2-G4-TheScriptingProject/blob/main/Ressources/Images_Linux/Linux%20-%203Fonction_Reseaux.png)
+![Demo_fonctionRéseau](https://github.com/WildCodeSchool/TSSR-2503-P2-G4-TheScriptingProject/blob/main/Ressources/Images_Linux/Linux%20-%203Fonction_Reseaux.png)
 
 ### 4) F.A.Q
 

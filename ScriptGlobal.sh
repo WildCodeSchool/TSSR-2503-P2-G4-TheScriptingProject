@@ -693,7 +693,7 @@ ID="fichier_ID.txt"  #doit etre dans le meme dossier que le script au bon format
 
 
             
-            #variables loclaes 
+            #variables locales 
             local liste_interfaces
             local nb_interfaces
             local liste_ip
@@ -1375,6 +1375,7 @@ log_evt "Début de la navigation dans le menu"
                                     
                                     #si Groupe d'appartenance
                                     4)
+                                    echo "Fonction en devellopement"
                                     ;;
 
                                     #Si Quitter
@@ -1504,26 +1505,31 @@ log_evt "Début de la navigation dans le menu"
                 
                         #  Si Nb de Disque
                         1)
+                        echo "Fonction en devellopement"
 
                         ;;
 
                         # Si Partition
                         2)
+                       echo "Fonction en devellopement" 
 
                         ;;
 
                         # Si Espace disque restant par partition
                         3)
+                        echo "Fonction en devellopement"
 
                         ;;
 
                         # Si Nom et espace disque d'un dossier
                         4)
+                        echo "Fonction en devellopement"
 
                         ;; 
 
                         # Si liste des lecteurs monté
                         5)
+                        echo "Fonction en devellopement"
 
                         ;;
 
@@ -1559,16 +1565,19 @@ log_evt "Début de la navigation dans le menu"
 
                         #si Création de de repertoire
                         1)
+                        echo "Fonction en devellopement"
 
                         ;;
 
                         #si modification répertoire
                         2)
+                        echo "Fonction en devellopement"
 
                         ;;
 
                         #suppression de repertoire 
                         3)
+                        echo "Fonction en devellopement"
 
                         ;;
 
@@ -1618,6 +1627,7 @@ log_evt "Début de la navigation dans le menu"
 
                 #si Réseau
                 1) Informations_reseau
+                echo "Fonction en devellopement"
 
                     #On pose la question Nb d'interface ou Adresse Ip ou Adresse MAC ou Listes des ports Ouverts ou Quitter
 
@@ -1636,6 +1646,7 @@ log_evt "Début de la navigation dans le menu"
 
                 #si Pare Feu
                 2) pare_feu
+                echo "Fonction en devellopement"
 
                     #On pose la question Statut ou Activation ou Désactivation ou quitter
 
@@ -1652,6 +1663,7 @@ log_evt "Début de la navigation dans le menu"
 
                 #Si Gestion à distance
                 3) script_distant
+                echo "Fonction en devellopement"
 
                     #on pose la question Prise de main à distance ou Execution de script sur la machine distante
 
@@ -1718,6 +1730,7 @@ log_evt "Début de la navigation dans le menu"
                 ;;
                 #Si Systeme
                 2) shutdown
+                echo "Fonction en devellopement"
 
                     #on pose la question Arrêt ou redémarrage ou Verouillage ou Version de l'Os ou MAJ du système ou quitter
 
@@ -1739,6 +1752,7 @@ log_evt "Début de la navigation dans le menu"
 
                 #Si Journaux d'événements
                 3) 
+                echo "Fonction en devellopement"
 
                     #on pose la question Evenement utilisateur ou evenement ordinateur ou quitter
 

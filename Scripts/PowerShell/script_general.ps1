@@ -271,7 +271,7 @@ function Addadmin_Group  {
         net user
         log_evt "Lancement de la fonction ajout dans un groupe administrateur."
 while ($true) {
-        $user = Read-Host "Merci d'indiquer un nom d'utilisateur." -ForegroundColor Cyan
+        $user = Read-Host "Merci d'indiquer un nom d'utilisateur."
 
         if ([string]::IsNullOrWhiteSpace($user)) {
             Write-Host "Nom d'utilisateur invalide." 
